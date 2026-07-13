@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="../favicon32.png" />
+    <title>Testowanie menu kontekstowego i paska przewijania</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .element {
+            margin-top: 20px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 290px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Testowy tekst, testowy tekst, testowy tekst.</p>
+        <div class="element">
+            <a href="#">Testowy link, testowy link, testowy link.</a>
+        </div>
+        <div class="element">
+            <input type="text" value="Tekst zablokowany" readonly>
+        </div>
+        <div class="element">
+            <input type="text" placeholder="Napisz coś">
+        </div>
+        <div class="element">
+            <input type="password" placeholder="Hasło">
+        </div>
+        <div class="element">
+            <img src="obrazek.jpg" alt="Obrazek" width="300" height="180">
+        </div>
+        <div class="element">
+            <a href="obrazek.jpg"><img src="obrazek.jpg" alt="Link do obrazka" width="300" height="180"></a>
+        </div>
+        <div class="element">
+            <video width="300" height="180" controls>
+                <source src="wideo_audio.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje tagu video.
+            </video>
+        </div>
+	<div style="height: 100px;"> </div>
+	<p>Testowy tekst, testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst.</p>
+	<p>Testowy tekst, testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst.</p>
+	<p>Testowy tekst, testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst.</p>
+	<p>Testowy tekst, testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst.</p>
+        <p>Testowy tekst, testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst.</p>
+        <p>Testowy tekst, testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst.</p>
+	<p>Testowy tekst, testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst, testowy tekst.</p>
+        <p>Testowy tekst.</p>
+	<div style="height: 800px;"> </div>
+    </div>
+</body>
+</html>
+

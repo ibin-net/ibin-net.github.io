@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/ico" href="../favicon32.png" />
+    <title>Lista linków testowych</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 50px 150px 50px 150px; background-color: #f4f4f9; }
+        h1 { color: #333; }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+            gap: 15px; 
+            margin-top: 20px; 
+        }
+        a { 
+            display: block; 
+            padding: 15px; 
+            background: white; 
+            color: #007bff; 
+            text-decoration: none; 
+            text-align: center; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        a:hover { 
+            background: #007bff; 
+            color: white; 
+            border-color: #0056b3; 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        a:visited { color: #6f42c1; }
+        .counter { font-size: 0.9em; color: #666; margin-bottom: 70px; }
+    </style>
+</head>
+<body>
+
+    <h1>Tester zachowania kart</h1>
+    <p class="counter">Wygenerowano 40 niezależnych linków do testów:</p>
+
+    <div class="grid" id="linkContainer"></div>
+
+    <script>
+        const container = document.getElementById('linkContainer');
+        
+        // Wspólne style dla wszystkich poziomów
+        const subStyles = `
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#e9ecef; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; margin: 0; padding: 0; }
+            h1 { font-size:120px; margin:-100px 0 0 0; color: #333; }
+            p { color: #666; }
+            .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 15px; margin: 50px 0 -104px 0; width: 100%; max-width: 800px; }
+            a { display: block; padding: 15px; background: white; color: #007bff; text-decoration: none; text-align: center; border: 1px solid #ddd; border-radius: 8px; font-weight: bold; transition: all 0.2s; }
+            a:hover { background: #007bff; color: white; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+            a:visited { color: #6f42c1; }
+            button { margin-bottom: 20px; padding: 10px 20px; cursor: pointer; border-radius: 5px; border: 1px solid #ccc; background: #fff; font-family: inherit; }
+        `;
+
+        for (let i = 1; i <= 40; i++) {
+            const link = document.createElement('a');
+            
+            const htmlContent = `
+                <html lang="pl">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>${i}</title>
+                        <style>${subStyles}</style>
+                    </head>
+                    <body>
+                        <h1>${i}</h1>
+                        <p>To jest strona testowa numer ${i}</p>
+                        <button onclick="window.close()">Zamknij kartę</button>
+
+                        <div class="grid" id="subContainer"></div>
+
+                        <script>
+                            const subContainer = document.getElementById('subContainer');
+                            for (let j = 1; j <= 6; j++) {
+                                const subTitle = ${i} + "-" + j;
+                                const subHtml = "<html lang='pl'><head><meta charset='UTF-8'><title>" + subTitle + "</title><style>${subStyles.replace(/\n/g, '')}</style></head><body><h1>" + subTitle + "</h1><p>Podstrona wygenerowana z linku " + ${i} + "</p><button onclick='window.close()'>Zamknij kartę</button></body></html>";
+                                
+                                const blob = new Blob([subHtml], { type: 'text/html' });
+                                const url = URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.target = "_blank";
+                                a.textContent = "Link " + subTitle;
+                                subContainer.appendChild(a);
+                            }
+                        <\/script>
+                    </body>
+                </html>
+            `;
+            
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            
+            link.href = url;
+            link.target = "_blank";
+            link.textContent = "Link nr " + i;
+            
+            container.appendChild(link);
+        }
+    </script>
+
+</body>
+</html>
