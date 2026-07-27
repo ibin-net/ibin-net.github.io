@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Twoje IP</title>
 <link rel="shortcut icon" type="image/ico" href="../../favicon32.png" />
 <style>
@@ -21,7 +22,7 @@
     font-size: 48px;
     color: #323232;
     display: block;
-    margin: 40px 0 10px;
+    margin: 40px 20px 10px;
     height: 55px;
   }
   .dots {
@@ -115,7 +116,7 @@
           const countryCode = locLine.split('=')[1].trim();
           const countryName = regionNames.of(countryCode) || countryCode;
           document.getElementById('country-info').innerHTML = `
-            <img class="flag" src="https://flagcdn.com/h20/${countryCode.toLowerCase()}.png" alt="${countryName}">
+            <img class="flag" src="flags/${countryCode.toLowerCase()}.png" alt="${countryName}">
             <span>${countryName}</span>
           `;
         }
