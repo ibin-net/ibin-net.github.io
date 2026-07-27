@@ -38,8 +38,8 @@
     min-height: 32px;
   }
   .flag {
-    width: 28px;
-    height: auto;
+    width: auto;
+    height: 20px;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     vertical-align: middle;
@@ -115,7 +115,7 @@
           const countryCode = locLine.split('=')[1].trim();
           const countryName = regionNames.of(countryCode) || countryCode;
           document.getElementById('country-info').innerHTML = `
-            <img class="flag" src="https://flagcdn.com/w40/${countryCode.toLowerCase()}.png" alt="${countryName}">
+            <img class="flag" src="https://flagcdn.com/h20/${countryCode.toLowerCase()}.png" alt="${countryName}">
             <span>${countryName}</span>
           `;
         }
