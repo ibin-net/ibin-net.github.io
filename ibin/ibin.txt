@@ -1,0 +1,47 @@
+joemonster.org##body > div[style*="position: fixed; left: 0px; bottom: 10%; z-index: 1004;"]
+joemonster.org##body > div:nth-child(2)[style*="position: fixed; left: 0px; bottom: 10%; z-index: 1004;"]
+joemonster.org###fb-share
+joemonster.org###mobile-content > div.art-wrapper > fieldset.content-box
+joemonster.org###main_article > div.art-wrapper > div.fbframe
+joemonster.org###main_article > div.art-wrapper > div.relatedArticles
+sekurak.pl##body > div.wrapper > div.sidebar-mobile > div.widget_text.widget.widget_custom_html
+sekurak.pl###sidebar > div.widget_text.widget.widget_custom_html
+wykop.pl##.pub-slot-wrapper
+wykop.pl##.sponsored-1
+wykop.pl##.hits-slider.wide-top
+wykop.pl##.onboarding-btn.popper-button
+wykop.pl##.share-socials
+wykop.pl##li.sharing
+wykop.pl##.main-content > main > section > div.content > section.home-page > section.home > section.stream.home-stream.from-pagination-home-stream > div.content > section.entry[id^="comment-"]
+wykop.pl##a[data-v-690acf94][download]
+hejto.pl##header > div.text-center.text-common-white.flex.items-center.justify-center.fixed.bottom-0.w-full.py-1\.5
+telepolis.pl##.banner.banner--header-bottom.banner--default
+telepolis.pl##.banner.banner--horizontal.banner--no-margins
+telepolis.pl##.banner.banner--sticky.banner--no-margins
+telepolis.pl##.content-array__banner
+telepolis.pl##.banner.banner--homepage
+telepolis.pl##.banner.banner--homepage-find-phone
+telepolis.pl##.content-array__media-expert
+telepolis.pl##.article__body .onnetwork
+telepolis.pl##.article-body .news-list-col
+telepolis.pl##.comment-promo.comment-promo--info
+telepolis.pl##.comment-notifications-button .comment-notifications-button__counter-wrapper
+||onnetwork.tv^$domain=telepolis.pl
+android.com.pl##section.post__content > div[style="background-color: var(--clr-danger); color: rgb(255, 255, 255); padding: 0.1em 1em; margin-bottom: 2em; border-radius: var(--border-radius); font-size: 0.9em;"]
+||onnetwork.tv^$domain=android.com.pl
+
+wykop.pl##.sidebar aside[data-v-0a0cb29b]
+wykop.pl##.content section[data-v-06ec46cc]:has(> .wrapper > a[href*="tradedoubler.com"])
+
+facebook.com##.m.fixed-container.top:has(div[aria-label="Zaloguj się"])
+facebook.com##.m.fixed-container.bottom:has(div[aria-label="Zaloguj się"])
+
+
+wykop.pl##*:matches-css-before(content: /r.*e.*k.*l.*a.*m.*a/)
+wykop.pl##*:matches-css-before(content: /r.*e.*k.*l.*a.*m.*a/):style(display: none !important;)
+
+wykop.pl##[data-label^="ad:"]
+wykop.pl##[aria-label="Reklama"]
+wykop.pl##[title="Reklama"]
+
+
