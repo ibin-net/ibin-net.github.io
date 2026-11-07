@@ -35,7 +35,7 @@ wykop.pl##.content section[data-v-06ec46cc]:has(> .wrapper > a[href*="tradedoubl
 
 facebook.com##.m.fixed-container.top:has(div[aria-label="Zaloguj się"])
 facebook.com##.m.fixed-container.bottom:has(div[aria-label="Zaloguj się"])
-
+facebook.com##.m.fixed-container.bottom:has(div[role="button"])
 
 wykop.pl##*:matches-css-before(content: /r.*e.*k.*l.*a.*m.*a/)
 wykop.pl##*:matches-css-before(content: /r.*e.*k.*l.*a.*m.*a/):style(display: none !important;)
